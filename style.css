@@ -545,6 +545,8 @@ footer {
 
     .social-media {
         grid-area: 3 / 1 / 5 / 2;
+        justify-self: start;
+        justify-content: space-between;
     }
 
     .menu-footer {
