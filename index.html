@@ -5,32 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Manage landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <header>
-    <img src="./images/logo.svg" alt="logo" id="logo-nav">
-    <nav class="navigation">
-      <ul class="menu">
-        <li><a href="#" class="menu-link">Pricing</a></li>
-        <li><a href="#" class="menu-link">Product</a></li>
-        <li><a href="#" class="menu-link">About Us</a></li>
-        <li><a href="#" class="menu-link">Careers</a></li>
-        <li><a href="#" class="menu-link">Community</a></li>
-      </ul>
-    </nav>
-    <button class="button primary-color">Get Started</button>
+    <div>
+      <img src="./images/logo.svg" alt="logo" id="logo-nav">
+      <img src="./images/icon-hamburger.svg" alt="menu" id="menu-icon" onclick="showMenu()">
+      <img src="./images/icon-close.svg" alt="close-menu" id="menu-icon-close" onclick="closeMenu()">
+    </div>
+    
+    <div>
+      <nav class="navigation">
+        <ul class="menu">
+          <li><a href="#" class="menu-link">Pricing</a></li>
+          <li><a href="#" class="menu-link">Product</a></li>
+          <li><a href="#" class="menu-link">About Us</a></li>
+          <li><a href="#" class="menu-link">Careers</a></li>
+          <li><a href="#" class="menu-link">Community</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <button class="button primary-color button-nav">Get Started</button>
   </header>
 
   <main>
-    <section id="intro-section">
+    <section class="intro-section">
       <div class="grap-illustrations">
         <img src="./images/illustration-intro.svg" alt="graph illustrations" id="illustration-img">
       </div>
@@ -42,33 +46,42 @@
       </div>      
     </section>
 
-    <section id="about">
+    <section class="about">
       <div class="about-container">
         <h2 id="title-about">What’s different about Manage?</h2>
         <p id="text-about">Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams. </p>
       </div>
       
-      <div class="about-container">
+      <div class="about-container-list">
         <ul class="about-list">
           <li class="about-list-item">
-            <span class="about-list-number">01</span>
-            <h3 class="about-list-title">Track company-wide progress</h3>
+            <div class="container-number-title-list">
+              <span class="about-list-number">01</span>
+              <h3 class="about-list-title">Track company-wide progress</h3>
+            </div>
+
             <p class="about-list-text">
               See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.
             </p>
           </li>
 
           <li class="about-list-item">
-            <span class="about-list-number">02</span>
-            <h3 class="about-list-title">Advanced built-in reports</h3>
+            <div class="container-number-title-list">
+              <span class="about-list-number">02</span>
+              <h3 class="about-list-title">Advanced built-in reports</h3>
+            </div>
+            
             <p class="about-list-text">
               Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.
             </p>
           </li>
 
           <li class="about-list-item">
-            <span class="about-list-number">03</span>
-            <h3 class="about-list-title">Everything you need in one place</h3>
+            <div class="container-number-title-list">
+              <span class="about-list-number">03</span>
+              <h3 class="about-list-title">Everything you need in one place</h3>
+            </div>
+            
             <p class="about-list-text">
               Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.
             </p>
@@ -77,37 +90,47 @@
       </div>
     </section>
 
-    <section id="testimonials-cards">
+    <section class="testimonials-cards">
       <h2 id="testimonials-title">What they’ve said</h2>
 
-      <div class="container-cards">
-        <div class="card">
-          <img src="./images/avatar-anisha.png" alt="Anisha Avatar">
-          <h4 class="card-title">Anisha Li</h4>
-          <p class="card-text">“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
+      <div class="wrapper">
+        <div class="container-cards">
+          <div class="card">
+            <img src="./images/avatar-anisha.png" alt="Anisha Avatar" class="avatar-img">
+            <h4 class="card-title">Anisha Li</h4>
+            <p class="card-text">“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
+          </div>
+  
+          <div class="card">
+            <img src="./images/avatar-ali.png" alt="Ali Avatar" class="avatar-img">
+            <h4 class="card-title">Ali Bravo</h4>
+            <p class="card-text">“We have been able to cancel so many other subscriptions since using Manage. There is no more ross-channel confusion and everyone is much more focused.”</p>
+          </div>
+  
+          <div class="card">
+            <img src="./images/avatar-richard.png" alt="Richard Avatar" class="avatar-img">
+            <h4 class="card-title">Richard Watts</h4>
+            <p class="card-text">“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”</p>
+          </div>
+  
+          <div class="card">
+            <img src="./images/avatar-shanai.png" alt="Shanai Avatar" class="avatar-img">
+            <h4 class="card-title">Shanai Gough</h4>
+            <p class="card-text">“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+          </div>
         </div>
+      </div>      
 
-        <div class="card">
-          <img src="./images/avatar-ali.png" alt="Ali Avatar">
-          <h4 class="card-title">Ali Bravo</h4>
-          <p class="card-text">“We have been able to cancel so many other subscriptions since using Manage. There is no more ross-channel confusion and everyone is much more focused.”</p>
-        </div>
-
-        <div class="card">
-          <img src="./images/avatar-richard.png" alt="Richard Avatar">
-          <h4 class="card-title">Richard Watts</h4>
-          <p class="card-text">“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”</p>
-        </div>
-
-        <div class="card">
-          <img src="./images/avatar-shanai.png" alt="Shanai Avatar">
-          <h4 class="card-title">Shanai Gough</h4>
-          <p class="card-text">“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
-        </div>
-
+      <div class="card-control">
+        <input type="radio" name="radio-slider-btn" class="slider-btn" onclick="setSlide(1)" checked>
+        <input type="radio" name="radio-slider-btn" class="slider-btn" onclick="setSlide(2)">
+        <input type="radio" name="radio-slider-btn" class="slider-btn" onclick="setSlide(3)">
+        <input type="radio" name="radio-slider-btn" class="slider-btn" onclick="setSlide(4)">
       </div>
 
-      <button class="button primary-color">Get Started</button>
+      <div class="container-button-cards">
+        <button class="button primary-color">Get Started</button>
+      </div>      
     </section>
 
     <section class="get-started">
@@ -117,43 +140,53 @@
   </main>
 
   <footer>
-    <div class="logo-footer">
-      <img src="./images/logo.svg" alt="logo">
-    </div>
+    <div class="container-footer">
+      <div class="logo-footer">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
+  
+      <div class="social-media">
+        <a href="#"><img src="./images/icon-facebook.svg" alt="facebook" class="ico"></a>
+        <a href=""><img src="./images/icon-youtube.svg" alt="youtube"></a>
+        <a href=""><img src="./images/icon-twitter.svg" alt="twitter"></a>
+        <a href=""><img src="./images/icon-pinterest.svg" alt="pinterest"></a>
+        <a href=""><img src="./images/icon-instagram.svg" alt="instagram"></a>
+      </div>
+  
+      <div class="menu-footer">
+        <ul>
+          <li class="menu-item-footer"><a href="#">Home</a></li>
+          <li class="menu-item-footer"><a href="#">Pricing</a></li>
+          <li class="menu-item-footer"><a href="#">Products</a></li>
+          <li class="menu-item-footer"><a href="#">About Us</a></li>
+          <li class="menu-item-footer"><a href="#">Careers</a></li>
+          <li class="menu-item-footer"><a href="#">Community</a></li>
+          <li class="menu-item-footer"><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+  
+      <form class="form-register" novalidate>
+        <div class="container-input-error">
+          <input type="email" id="email-form" class="error email-form" placeholder="Updates in your inbox…">
+          <span class="error-mensage"></span>
+        </div>        
+        <button type="submit" class="button primary-color button-form" id="button-form">Go</button>
+      </form>
 
-    <div class="social-media">
-      <a href="#"><img src="./images/icon-facebook.svg" alt="facebook"></a>
-      <a href=""><img src="./images/icon-youtube.svg" alt="youtube"></a>
-      <a href=""><img src="./images/icon-twitter.svg" alt="twitter"></a>
-      <a href=""><img src="./images/icon-pinterest.svg" alt="pinterest"></a>
-      <a href=""><img src="./images/icon-instagram.svg" alt="instagram"></a>
+      <div class="copryright-footer">
+        <p class="copryright-text">Copyright 2020. All Rights Reserved</p>
+      </div>
+  
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Ana Paula da Silva Santos</a>.
+      </div>
     </div>
+    
 
-    <div class="menu-footer">
-      <ul>
-        <li class="menu-item-footer"><a href="#">Home</a></li>
-        <li class="menu-item-footer"><a href="#">Pricing</a></li>
-        <li class="menu-item-footer"><a href="#">Products</a></li>
-        <li class="menu-item-footer"><a href="#">About Us</a></li>
-        <li class="menu-item-footer"><a href="#">Careers</a></li>
-        <li class="menu-item-footer"><a href="#">Community</a></li>
-        <li class="menu-item-footer"><a href="#">Privacy Policy</a></li>
-      </ul>
-    </div>
+    
+  </footer>
+  <script src="./script.js"></script>
 
-    <form class="form-register">
-      <input type="email" placeholder="Updates in your inbox…">
-      <button type="submit" class="button primary-color button-form">Go</button>
-    </form>
-
-    <div class="copryright-footer">
-      <p class="copryright-text">Copyright 2020. All Rights Reserved</p>
-    </div>
-
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Ana Paula da Silva Santos</a>.
-    </div>
-  </footer>  
 </body>
 </html>
